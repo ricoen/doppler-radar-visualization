@@ -20,6 +20,7 @@ vmax = color_index.max()
 def plot_data(cmap):
     fig, ax = plt.subplots(figsize=(10, 10))
     df.plot(column='colorIndex',
+            alpha=0.8,
             cmap=cmap,
             ax=ax)
     fig.suptitle('Miami Doppler Radar (KAMX), NEXRAD LEVEL III, Base Velocity', fontsize=16)
