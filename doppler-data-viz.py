@@ -2,11 +2,13 @@ import os
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 import geopandas as gpd
+import contextily as ctx
 from matplotlib import cm
 from matplotlib.colors import ListedColormap
 
 data_path = os.path.join("data", "KAMX_N0V_20210131_000000.shp")
 data = gpd.read_file(data_path)
+df = data.to_crs(epsg=3857)
 
 # print(data.head(10))
 
@@ -17,7 +19,7 @@ vmax = color_index.max()
 
 def plot_data(cmap):
     fig, ax = plt.subplots(figsize=(10, 10))
-    data.plot(column='colorIndex',
+    df.plot(column='colorIndex',
             cmap=cmap,
             ax=ax)
     fig.suptitle('Miami Doppler Radar (KAMX), NEXRAD LEVEL III, Base Velocity', fontsize=16)
@@ -35,6 +37,7 @@ def plot_data(cmap):
                          '10', '20', '26', '36', '50', '64', 'RF'])
     cbar.set_label('kts')
     
+    ctx.add_basemap(ax, zoom=10, source=ctx.providers.Stamen.TonerLite)
     plt.show()
 
 cmap = ListedColormap(['#03dffc', '#0328fc', '#3903fc', '#03fca9', '#02d402', 
