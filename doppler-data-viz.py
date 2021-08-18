@@ -22,11 +22,13 @@ vmax = color_index.max()
 
 def plot_data(cmap):
     fig, ax = plt.subplots(figsize=(10, 10))
+    fig.suptitle('Miami Doppler Radar (KAMX), NEXRAD LEVEL III, Base Velocity', fontsize=16)
+    
     df.plot(column='colorIndex',
             alpha=0.8,
             cmap=cmap,
             ax=ax)
-    fig.suptitle('Miami Doppler Radar (KAMX), NEXRAD LEVEL III, Base Velocity', fontsize=16)
+    
     ax.set_title('01/31/2021 00:01:01')
     ax.set_xlabel('Long')
     ax.set_ylabel('Lat')
@@ -35,6 +37,7 @@ def plot_data(cmap):
     
     scalarmappaple = cm.ScalarMappable(norm=normalize, cmap=cmap)
     scalarmappaple.set_array(labels)
+    
     cbar = plt.colorbar(scalarmappaple)
     cbar.set_ticks([vmin, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, vmax])
     cbar.set_ticklabels(['-64', '-50', '-36', '-26', '-20', '-10', '-1', '0', 
@@ -42,6 +45,7 @@ def plot_data(cmap):
     cbar.set_label('kts')
     
     ctx.add_basemap(ax, zoom=10, source=ctx.providers.Stamen.TonerLite)
+    
     plt.show()
 
 cmap = ListedColormap(['#03dffc', '#0328fc', '#3903fc', '#03fca9', '#02d402', 
