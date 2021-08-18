@@ -6,14 +6,17 @@ import contextily as ctx
 from matplotlib import cm
 from matplotlib.colors import ListedColormap
 
+
 data_path = os.path.join("data", "KAMX_N0V_20210131_000000.shp")
 data = gpd.read_file(data_path)
+
 df = data.to_crs(epsg=3857)
 
 # print(data.head(10))
 
 color_index = data['colorIndex']
 labels = data['value']
+
 vmin = color_index.min()
 vmax = color_index.max()
 
