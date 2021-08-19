@@ -20,6 +20,7 @@ labels = data['value']
 vmin = color_index.min()
 vmax = color_index.max()
 
+
 def plot_data(cmap):
     fig, ax = plt.subplots(figsize=(10, 10))
     fig.suptitle('Miami Doppler Radar (KAMX), NEXRAD LEVEL III, Base Velocity', fontsize=16)
@@ -47,6 +48,7 @@ def plot_data(cmap):
     ctx.add_basemap(ax, zoom=10, source=ctx.providers.Stamen.TonerLite)
     
     plt.show()
+
 
 cmap = ListedColormap(['#03dffc', '#0328fc', '#3903fc', '#03fca9', '#02d402', 
                        '#005c00', '#a39c8e', '#5e5e5e', '#ff8c00', '#ffc800',

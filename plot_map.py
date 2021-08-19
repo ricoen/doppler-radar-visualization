@@ -10,6 +10,7 @@ data = gpd.read_file(data_path)
 df = data.to_crs(epsg=3857)
 
 ax = df.plot(figsize=(10, 10), alpha=0.5, edgecolor='k')
+
 ctx.add_basemap(ax)
 
 plt.show()
