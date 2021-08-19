@@ -21,13 +21,13 @@ vmin = color_index.min()
 vmax = color_index.max()
 
 
-def plot_data(cmap):
+def plot_data(colormap):
     fig, ax = plt.subplots(figsize=(10, 10))
     fig.suptitle('Miami Doppler Radar (KAMX), NEXRAD LEVEL III, Base Velocity', fontsize=16)
     
     df.plot(column='colorIndex',
             alpha=0.8,
-            cmap=cmap,
+            cmap=colormap,
             ax=ax)
     
     ax.set_title('01/31/2021 00:01:01')
@@ -36,7 +36,7 @@ def plot_data(cmap):
     
     normalize = mcolors.TwoSlopeNorm(vmin=vmin, vcenter=8, vmax=vmax)
     
-    scalarmappaple = cm.ScalarMappable(norm=normalize, cmap=cmap)
+    scalarmappaple = cm.ScalarMappable(norm=normalize, cmap=colormap)
     scalarmappaple.set_array(labels)
     
     cbar = plt.colorbar(scalarmappaple)
