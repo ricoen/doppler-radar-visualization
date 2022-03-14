@@ -14,7 +14,6 @@ df = data.to_crs("WGS84")
 # vmin = color_index.min()
 # vmax = color_index.max()
 
-
 # def plot_data(colormap):
 #     fig, ax = plt.subplots(figsize=(10, 10))
 #     fig.suptitle('Miami Doppler Radar (KAMX), NEXRAD LEVEL III, Base Velocity', fontsize=16)
