@@ -6,4 +6,5 @@ I provided two types of data visualization with two different libraries used (ma
 ## The result
 ![image](https://user-images.githubusercontent.com/15853855/129655338-c1fb43d4-727f-4272-bcca-b4d3593a8b9f.png)
 <br>
-![Uploading Screenshot from 2022-03-14 17-56-22.png…]()
+/home/ricoen/Pictures/Screenshot from 2022-03-14 17-56-22.png
+</br>
