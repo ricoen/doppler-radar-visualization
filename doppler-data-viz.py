@@ -1,6 +1,9 @@
 import os
 import geopandas as gpd
 import plotly.express as px
+import plotly.io as pio
+
+pio.renderers.default = "browser"
 
 data_path = os.path.join("data", "KAMX_N0V_20210131_000000.shp")
 data = gpd.read_file(data_path)
@@ -60,7 +63,7 @@ def plot_radar_data(color_map, vmin, vmax):
                               labels={'colorIndex':'Color Index'}
                            )
    fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-   fig.show()
+   pio.show(fig)
 
 color_index = df['colorIndex']
 palette = ['#03dffc', '#0328fc', '#3903fc', '#03fca9', '#02d402', '#005c00', 
