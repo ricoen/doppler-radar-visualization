@@ -4,6 +4,6 @@ An example of visualization Doppler Radar Data. The data used here is KAMX (Miam
 I provided two types of data visualization with two different libraries used (matplotlib and plotly).
 
 ## The result
-![image](https://user-images.githubusercontent.com/15853855/129655338-c1fb43d4-727f-4272-bcca-b4d3593a8b9f.png "matplotlib")
+![alt text](img/out.png "matplotlib")
 <br>
-![alt text](img/out.png "plotly")
+![alt text](img/out1.png "plotly")
