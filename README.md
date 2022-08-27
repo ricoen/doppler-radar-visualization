@@ -6,4 +6,4 @@ I provided two types of data visualization with two different libraries used (ma
 ## The results
 ![alt text](img/out.png "matplotlib")
 <br>
-![alt text](img/out1.png width="1000" "plotly")
+![alt text](img/out1.png "plotly")
